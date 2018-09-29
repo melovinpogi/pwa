@@ -1,0 +1,25 @@
+page-login {
+    #login{
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width:600px
+    }
+
+    .login-logo {
+        margin: auto;
+        background: url('../assets/imgs/app.png') no-repeat transparent;
+        background-size: 100%;
+        width: 300px;
+        height: 100px;
+      }
+
+      ion-content{
+        background: url(../../assets//imgs/green-lawn.jpg) !important;
+        background-size: cover !important;
+      }
+
+}

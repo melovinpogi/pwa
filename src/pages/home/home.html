@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title text-center>Dashboard</ion-title>
+    <ion-buttons end (click)="logout()">
+      <button ion-button icon-only>
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid fixed>
+    <ion-toolbar color="primary">
+      <ion-title text-center>Please complete all forms below.</ion-title>
+    </ion-toolbar>
+    <ion-row>
+      <ion-col col-auto col-lg-4 col-md-4>
+        <ion-card>
+          <ion-card-header text-center>
+            Profile Picture
+          </ion-card-header>
+          <ion-card-content>
+            <img [src]="profilePic != null ? profilePic : 'assets/icon/add_user.png'">
+            <input type="file" #fileInput name="files[]" (change)="processWebImage($event)" />
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-auto col-lg-4 col-md-4>
+        <ion-card (click)="openPage('W9Page')">
+          <ion-card-header  text-center>
+            W9 Form
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/icon/form.png">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-auto col-lg-4 col-md-4>
+        <ion-card (click)="openPage('AgreementPage')">
+          <ion-card-header  text-center>
+            Agreement
+          </ion-card-header>
+          <ion-card-content>
+            <img src="assets/icon/shake-hands.png">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

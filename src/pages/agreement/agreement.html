@@ -1,0 +1,695 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Agreement</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid fixed>
+    <div text-center>
+      <h4><u>Independent Contractor Agreement</u></h4>
+      <p>
+        This Independent Contractor Agreement (hereinafter referred to as the "Agreement") is made and entered into by and between
+        <strong>
+          Infinity Internet Marketing, Inc. d/b/a Fresh Lawn Mowing Services
+        </strong> , a Texas Corporation, (hereinafter referred to as "Fresh Lawn"), and Independent Contractor (the “Contractor”),
+        identified below, on this the <strong>{{formInfo.day}}</strong> of <strong>{{formInfo.month}} {{formInfo.year}}</strong>
+        (hereinafter referred to as the “Effective Date”)</p>
+    </div>
+    <form (submit)="submit()" [formGroup]="agForm">
+      <ion-row align-items-center>
+        <ion-col>
+          <ion-item>
+            <ion-label stacked>Day</ion-label>
+            <ion-input type="number" [(ngModel)]="formInfo.day" formControlName="day"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Month</ion-label>
+            <ion-select [(ngModel)]="formInfo.month" interface="popover" formControlName="month">
+              <ion-option value="January">January</ion-option>
+              <ion-option value="February">February</ion-option>
+              <ion-option value="March">March</ion-option>
+              <ion-option value="April">April</ion-option>
+              <ion-option value="May">May</ion-option>
+              <ion-option value="June">June</ion-option>
+              <ion-option value="July">July</ion-option>
+              <ion-option value="August">August</ion-option>
+              <ion-option value="September">September</ion-option>
+              <ion-option value="October">October</ion-option>
+              <ion-option value="November">November</ion-option>
+              <ion-option value="December">December</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Year</ion-label>
+            <ion-input type="number" [(ngModel)]="formInfo.year" formControlName="year"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Individual or Company Name</ion-label>
+            <ion-input type="text" [(ngModel)]="formInfo.individual_company_name" formControlName="individual_company_name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Owner/Contact Person</ion-label>
+            <ion-input type="text" [(ngModel)]="formInfo.contact_person" formControlName="contact_person"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Street Address</ion-label>
+            <ion-input type="text" [(ngModel)]="formInfo.address" formControlName="address"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>City</ion-label>
+            <ion-input type="text" [(ngModel)]="formInfo.city" formControlName="city"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>State</ion-label>
+            <ion-input type="text" [(ngModel)]="formInfo.state" formControlName="state"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Zipcode</ion-label>
+            <ion-input type="number" [(ngModel)]="formInfo.zip" formControlName="zip"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="email" [(ngModel)]="formInfo.email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Telephone</ion-label>
+            <ion-input type="number" [(ngModel)]="formInfo.tel_no" formControlName="tel_no"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Cell Phone</ion-label>
+            <ion-input type="number" [(ngModel)]="formInfo.cell_no" formControlName="cell_no"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>(Alt phone number/contact person)</ion-label>
+            <ion-input type="text" [(ngModel)]="formInfo.alt_contact_phone_or_person" formControlName="alt_contact_phone_or_person"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>ID Type</ion-label>
+            <ion-select [(ngModel)]="formInfo.id_type" interface="popover" formControlName="id_type">
+              <ion-option value="Social Security Number">Social Security Number</ion-option>
+              <ion-option value="Tax Identification Number">Tax Identification Number</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>ID Number</ion-label>
+            <ion-input type="number" [(ngModel)]="formInfo.id_number" formControlName="id_number"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <div class="item item-text-wrap form">
+        <p>
+          Hereinafter Fresh Lawn and Contractor are individually sometimes referred to as the “Party” and collectively referred to
+          as the "Parties." In consideration of the mutual promises and covenants contained herein and other good and valuable
+          consideration, the Parties hereby freely and voluntarily enter into this Agreement, and hereby agree to the following:
+        </p>
+      </div>
+      <h4 style="text-align:center">A. Recitals</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. Fresh Lawn contracts with Contractor to perform lawn, gardening, planting, mowing and related landscape services (the
+          “Services”) at Customers’ homes or businesses.
+        </p>
+        <p>
+          2. Contractor engages in the business of performing the Services and can provide those Services as more specifically defined
+          in a “Work Order” (as defined in Section E) provided to Contractor by Fresh Lawn pursuant to its customers’ requests.
+          Contractor represents and warrants that it has the expertise, experience, and tools to perform the lawn services
+          assigned to it in the Work Order.
+        </p>
+        <p>
+          3. This Agreement shall become effective as of the Effective Date, and shall apply on a job-by-job basis pursuant to Work
+          Orders accepted by Contractor. This Agreement may be terminated by either party hereto for any reason whatsoever
+          by providing written notice to the other party at least three (3) calendar days prior to the effective date of
+          such termination. Fresh Lawn shall not owe the Contractor compensation for any services provided by the Contractor
+          following the effective date of such termination.
+        </p>
+      </div>
+      <h4 style="text-align:center">B. Status as Independent Contractor</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. The Contractor hereby acknowledges that he/she is an independent contractor in relation to Fresh Lawn, and said Contractor
+          is in no way to be considered a servant, agent, partner, or an employee of Fresh Lawn, and acknowledges that it
+          is not engaged in a joint venture, partnership, or in any other manner affiliated with Fresh Lawn other than as
+          an independent contractor. It is hereby acknowledged by the Contractor that the Contractor shall have the sole
+          responsibility to control the details of the work performed in accordance with the Work Order and to exert its/his/her
+          individual supervision over any of the employees, associates, and subcontractors of Contractor to perform the work
+          and services required by the Work Order and as otherwise directed by Fresh Lawn.
+        </p>
+      </div>
+      <h4 style="text-align:center">C. Independent Contractor’s Obligations</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. JOB PERFORMANCE. It is the responsibility of the Contractor to provide the Services in a satisfactory manner and to provide
+          good quality work for the customers of Fresh Lawn. Contractor acknowledges that Contractor has the sole responsibility
+          to fix any issues or problems Contractor causes that arise from Contractor’s failure to perform in accordance with
+          the Work Order upon twenty-four (24) hours’ notice identifying such deficiency.
+        </p>
+
+        <div class="item item-text-wrap form">
+          <p>
+            a. <strong> Contractor is free to accept or reject work. </strong>
+          </p>
+        </div>
+        <div class="item item-text-wrap form">
+          <p>
+            b. Fresh Lawn will not provide Contractor with any equipment in carrying out the duties and responsibilities in supplying
+            the lawn services as required in the Work Order. It is the sole responsibility of Contractor to provide transportation
+            to the job sites, hire its own personnel or subcontractors, and provide, at minimum, the following items and
+            equipment in good working order to provide the Services to the standards expected by Fresh Lawn’s customers:
+          </p>
+          <div class="item item-text-wrap form">
+            <p> 1. Gas Lawn Mower with a sharp blade and a bag;</p>
+            <p> 2. Gas Weed eater and/or edger;</p>
+            <p> 3. Gas Blower; </p>
+            <p> 4. Gas Hedge Trimmers; </p>
+            <p> 5. Safety Goggles; and </p>
+            <p> 6. A computer, tablet, or smart phone to enable the Contractor to send and receive email, take photos, and
+              utilize Fresh Lawn’s electronic contractor application.</p>
+          </div>
+        </div>
+        <div class="item item-text-wrap form">
+          <p>
+            c. Contractor is free to decide how to perform work that complies with a customer’s expectations as specified in a “Work
+            Order.” Fresh Lawn shall have no right or authority to direct or control the Contractor or his/her employees
+            or sub-contractors with respect to the performance of the Contractor's duties under this Agreement, or with respect
+            to any other matter, except as otherwise provided by this Agreement. It is understood and agreed that Fresh Lawn
+            is interested only in the results pursuant to customer’s requested service and performance date as requested
+            in the work order to be achieved by the Contractor under this Agreement; the manner and method of performing
+            all duties and services of the Contractor under this Agreement and achieving the desired results shall be under
+            the exclusive control of the Contractor according to the Contractor’s particular skills and expertise.
+          </p>
+        </div>
+        <div class="item item-text-wrap form">
+          <p>
+            d. The Contractor shall provide the services and any associated tangible items as set forth in this Agreement. The Contractor
+            shall further be responsible for maintaining and furnishing, at his/her own expense, a place of work, and any
+            tools, supplies, apparel, facilities, equipment, and appropriate communications devices and services required
+            for the Contractor to render his/her services to Fresh Lawn hereunder.
+          </p>
+        </div>
+        <div class="item item-text-wrap form">
+          <p>
+            e. The Contractor may, in his/her sole discretion and without first consulting with Fresh Lawn, hire persons to assist him/her
+            in performing the services required hereunder. Any and all such persons hired by the Contractor to assist in
+            performing such services shall be considered employees or sub-contractors of the Contractor, and, conversely,
+            no person, sub-contractor, or agent hired by the Contractor shall be considered an employee of Fresh Lawn, unless
+            specifically indicated otherwise in an agreement signed by all parties. The parties acknowledge and agree that
+            Fresh Lawn will not have the authority to hire, fire, supervise, control, or manage any of the Contractor’s employees.
+            Upon request, the Contractor shall immediately provide Fresh Lawn with proof of disability, workers’ compensation,
+            unemployment compensation, and/or general liability insurance, as applicable, covering such employees.
+          </p>
+        </div>
+        <div class="item item-text-wrap form">
+          <p>
+            f. The Contractor represents and warrants that (s)he is not, and does not at any time under this Agreement, expect that (s)he
+            will become, economically dependent on Fresh Lawn, and further represents and warrants that (s)he is in business
+            for him/herself and not for Fresh Lawn. Nevertheless, as a material term of this Agreement, in the event that
+            under this Agreement, the Contractor does become, or anticipates that (s)he will become, economically dependent
+            upon Fresh Lawn, (s)he shall so notify Fresh Lawn in writing within three (3) business days of such development.
+            The Contractor acknowledges and agrees that his/her failure to provide such written notice shall be deemed a
+            material breach of this Agreement.
+          </p>
+        </div>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          2. SAFETY. To help provide for the safety of those performing work under this agreement, the Contractor agrees that anyone
+          performing the Services shall wear appropriate clothing at all times. The items to be worn are to be determined
+          in the sole discretion of the Independent Contractor in relation to the Services to be performed, but should project
+          a professional appearance. The items to be worn are at the sole discretion of the Contractor with regard to prevailing
+          standards of safety and professionalism in the industry.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          3. LEGAL COMPLIANCE. The Contractor agrees to comply in all material respects with all applicable local, state and federal
+          laws, rules and regulations now or hereafter in force. The methods of compliance are to be determined in the sole
+          discretion of the Independent Contractor.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          4. CONFLICTS WITH CUSTOMERS. The Contractor shall refer conflicts with Customers concerning any issue (e.g., pets, fences,
+          etc.) to the customer directly by using the Fresh Lawn app, or with assistance from a dispatcher, so it can be
+          addressed further.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          5. PHOTOGRAPHS. Contractor shall take photographs of the Customer’s lawn once the work is completed. Should the Customer
+          request that Contractor not take photographs, Contractor shall stop and delete the photographs, if so requested.
+          In the event that photographs are permitted, Contractor agrees:
+        </p>
+        <div class="item item-text-wrap form">
+          <p> a. Not to take pictures facing the Customer’s house wherein the interior of the house is visible in the photograph.</p>
+          <p> b. Never take pictures of the interior of the Customer’s house.</p>
+        </div>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          6. INSURANCE. Contractor shall carry and maintain automobile insurance and shall provide evidence that such insurance is
+          in full force and effect by furnishing Fresh Lawn with a Certificate of Insurance at the inception of this agreement
+          and when reasonably requested by Fresh Lawn and no less than on a quarterly basis. Because Fresh Lawn is not your
+          employer, it shall not furnish you with insurance. The Contractor is solely responsible, to the extent required
+          by applicable law, rule, or regulation or as requested by Fresh Lawn, for securing his/her own disability, unemployment
+          compensation, general liability, and/or other insurance coverage, and for obtaining workers’ compensation insurance
+          and training, for him/herself and others, as necessary.
+        </p>
+      </div>
+      <h4 style="text-align:center">D. Contractor Payment</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. In exchange for performing the services described in the Work Order, Fresh Lawn shall pay Contractor a flat rate subject
+          to sale taxes withheld and any other deductions as described in Section D(4).
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          2. If Contractor finds an error in the amount it received in Compensation, it must notify Fresh Lawn of the alleged error
+          in writing within THIRTY (30) of its occurrence. The failure of Contractor to notify Fresh Lawn within this time
+          shall serve as a WAIVER of any claims of Contractor.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          3. PAYMENT. Fresh Lawn will have checks made payable to the Contractor after 5:00 p.m., C.S.T., each Friday, subject to Texas
+          and Federal holidays
+        </p>
+        <div class="item item-text-wrap form">
+          <p>
+            a. To receive Contractor Payment, Contractor must complete all jobs for that day and the preceding week with pictures showing
+            the completion of the jobs.
+          </p>
+          <p>
+            b. Should the Contractor be unable to perform Friday’s work or show proof of completion before issuance the payments, Fresh
+            Lawn will pay the Contractor the following Monday after 3:00 p.m. upon verification with the required or adequate
+            proof of completion.
+          </p>
+        </div>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          4. TAXES. Fresh Lawn will collect all payments from the customers.
+        </p>
+        <div class="item item-text-wrap form">
+          <p>
+            a. It will collect all applicable sales taxes and remit said taxes to the Texas Comptroller of Public Accounts.
+          </p>
+          <p>
+            b. Fresh Lawn will issue a resale Sales Tax Certificate to the Contractor. Fresh Lawn will deduct the applicable 8.25% from
+            payments made to the Contractor.
+          </p>
+        </div>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          5. Fresh Lawn will send an IRS form 1099 to the Contractor to the address supplied above. Fresh Lawn is not responsible for
+          paying Federal Taxes on behalf of Contractor and the Contractor’s employees.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          6. The Contractor shall provide Fresh Lawn with a signed and completed IRS Form W-9 upon execution of this Agreement. Payment
+          by Fresh Lawn will be made to the individual named on the IRS Form W-9. The Contractor hereby agrees to notify
+          Fresh Lawn immediately upon any change of taxpayer information found on the IRS Form W-9.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          7. Fresh Lawn shall not withhold any taxes due by the Contractor from any payment it makes to the Contractor under this Agreement,
+          nor shall Fresh Lawn make any contributions to any federal, state, or local agency with respect to such payments
+          on behalf of the Contractor. Fresh Lawn shall report the payments made to the Contractor hereunder on an IRS Form
+          1099. The Contractor agrees and represents that, except as otherwise required in writing by the Internal Revenue
+          Service, the Contractor shall be responsible for paying, when due, all taxes, including estimated taxes, incurred,
+          imposed, or assessed, as a result of the Contractor’s receipt of fees from Fresh Lawn pursuant to this Agreement,
+          including but not limited to, income taxes, self-employment taxes, federal and/or state taxes.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          8. Benefits. The Contractor hereby acknowledges that neither (s)he nor his/her employees shall: (i) be eligible to participate
+          in any of Fresh Lawn’s employee benefit plans, fringe benefit programs, group insurance arrangements, or other
+          similar plans, programs, or arrangements maintained by Fresh Lawn for the benefit of its employees, (ii) ever claim
+          that (s)he is or was eligible for, or entitled to, any benefits under any such plan, program, or arrangement, or
+          (iii) receive any statutory benefit that Fresh Lawn makes available to its employees, including but not limited
+          to workers’ compensation, Social Security, or unemployment compensation coverage.
+        </p>
+      </div>
+      <h4 style="text-align:center">E. Fresh Lawn’s Obligations</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. WORK ORDER. This Work Order will furnish the Contractor of the following information for the day’s work:
+        </p>
+        <div class="item item-text-wrap form">
+          <p> a. The Customer’s name; </p>
+          <p> b. The Customer’s address; </p>
+          <p> c. The flat rate paid to Contractor for the work order if accepted by Contractor; </p>
+          <p> d. A list of the lawn services ordered; </p>
+          <p> e. Day the work order is to be completed, which is the day of issuance unless otherwise specified; and </p>
+          <p> f. If known, the frequency this Customer receives lawn services each month. </p>
+        </div>
+      </div>
+      <div class="item item-text-wrap form">
+        <p> 2. Fresh Lawn shall provide limited supervision ONLY for quality control and acceptability of job performance
+          and workmanship of Contractor. It shall not manage the day to day operations of the Contractor. </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          3. The Contractor shall not receive performance reviews, vocational training, or business cards from Fresh Lawn, nor shall
+          the Contractor be required to attend meetings at Fresh Lawn’s facilities or be subject to the standard disciplinary
+          practices and procedures to which Fresh Lawn’s employees are subject.
+        </p>
+      </div>
+      <h4 style="text-align:center">F. Breach, Penalties and Remedies</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. MUTUAL RIGHT TO CANCELLATION. Fresh Lawn and the Contractor have the right to cancel this Agreement at any time by providing
+          written notice via email or certified mail return receipt requested. Notice shall be deemed to have occurred upon
+          placing the notice in the mail or at receipt of email notice. Once notice of cancellation is provided, Fresh Lawn
+          will remove contractor from Fresh Lawn’s system. Should Contractor wish to cancel this Agreement, it must provide
+          at least 3 days written notice to Fresh Lawn.
+        </p>
+        <div class="item item-text-wrap form">
+          <p> a. Fresh Lawn will hold final payment until completion and validation of the work performed in accordance with
+            last Work Order received by Contractor. </p>
+          <p>
+            b. A $100 penalty will be assessed to Contractor should it fail to provide 7 days written notice prior to cancelling this
+            Agreement. The penalty shall be assessed from any monies owed to Contractor and shall be due to Fresh Lawn as
+            liquidated damages.
+          </p>
+        </div>
+
+        <p>
+          Notwithstanding the above, either Fresh Lawn or the Contractor shall have the right to cancel this Agreement immediately
+          if the other party commits a criminal or illegal act, embezzlement, fraud, willful conduct that is materially injurious
+          to the other Party, and/or a material breach of this Agreement.
+        </p>
+        <p>
+          The Parties further agree that, on termination of this Agreement, Contractor will surrender to Fresh Lawn all information,
+          photographs, or documents provided by Fresh Lawn to the Contractor, including both originals and any copies of
+          such material. Contractor also agrees that Contractor will not withhold any such documentation from Fresh Lawn.
+          All customer lists, and all records of the accounts of customers, and other records and books relating in any manner
+          whatsoever to the customers and prospective customers of Fresh Lawn shall at all times be the exclusive property
+          of Fresh Lawn. All such books, records, and catalogs shall be immediately returned by Contractor to Fresh Lawn
+          upon the termination of this Agreement.
+        </p>
+      </div>
+      <h4 style="text-align:center">G. No Liability to Independent Contractor</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          <strong>
+            1. Fresh Lawn shall in no way be liable for any injury, damage, accident suffered or caused as a result of the work performed
+            under this Agreement. Contractor acknowledges that Fresh Lawn has not made any representation regarding the safety,
+            stability, quality, integrity or suitability of any project site and it shall be the sole responsibility of Contractor
+            to make such assessments and protect himself and any employees, associates and subcontractors of Contractor from
+            injury on any and all work related to the project site.
+          </strong>
+        </p>
+      </div>
+      <h4 style="text-align:center">G. No Liability to Independent Contractor</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          <strong>
+            1. THE CONTRACTOR AGREES TO, AND HEREBY DOES, INDEMNIFY, DEFEND, PROTECT, AND HOLD HARMLESS FRESH LAWN AND ITS PRINCIPALS,
+            AGENTS, AND AFFILIATED COMPANIES OF AND FROM ANY AND ALL CLAIMS, ACTIONS, CAUSES OF ACTION, DEMANDS, LOSSES,
+            COSTS, EXPENSES, OBLIGATIONS,LIABILITIES, DAMAGES, RECOVERIES, AND DEFICIENCIES, INCLUDING INTEREST, PENALTIES,
+            ATTORNEYS’ FEES, AND COSTS, ASSERTED AGAINST FRESH LAWN OR ITS AFFILIATES, OR THAT FRESH LAWN OR ITS AFFILIATES
+            MAY SUFFER OR INCUR, AS A RESULT OF, PREDICATED UPON, CONCERNING, OR ARISING OUT OF: (A) THE CONTRACTOR’S FAILURE
+            TO COMPLY WITH ANY REPRESENTATION, COVENANT, OR OBLIGATION UNDER, OR ANY PROVISION OF, THIS AGREEMENT; (B) THE
+            CONTRACTOR’S FAILURE, OR ALLEGATIONS THAT (S)HE FAILED, TO PAY HIS/HER EMPLOYEES IN ACCORDANCE WITH APPLICABLE
+            FEDERAL, STATE, AND/OR LOCAL LAW; (C) ANY CLAIMS FOR WAGES, BENEFITS, OR COMPENSATION ASSERTED AGAINST FRESH
+            LAWN BY ANY EMPLOYEE, SUB-CONTRACTOR, OR AGENT HIRED OR ENGAGED BY THE CONTRACTOR; (D) ANY NEGLIGENT, WILLFUL,
+            OR GROSSLY NEGLIGENT ACTS OR OMISSIONS COMMITTED BY THE CONTRACTOR (OR THE CONTRACTOR’S EMPLOYEES, SUB-CONTRACTORS,
+            OR AGENTS) WHILE PERFORMING THE SERVICES REQUIRED HEREUNDER; OR (E) THE CONTRACTOR’S FAILURE TO PAY TAXES AS
+            SET FORTH IN THIS AGREEMENT AND/OR REQUIRED BY LAW.
+          </strong>
+        </p>
+      </div>
+      <h4 style="text-align:center">I. Independent Contractor Liable for all Taxes</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. The Contractor agrees and acknowledges that it shall be responsible for all taxes and other assessments due, whether state
+          or federal, and shall be solely responsible to pay to the Internal Revenue Service and any other tax agency, all
+          taxes due, and all withholding and quarterly estimated taxes which result from Fresh Lawn’s payment to Contractor
+          for services rendered to Fresh Lawn. This responsibility to pay taxes includes, but it is not limited to, the payment
+          of social security taxes, withholding taxes, quarterly estimated taxes, unemployment taxes (state and federal),
+          and any other taxes, state or federal, required by law to be paid as a function, or result of any amounts paid
+          by Fresh Lawn to Contractor.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          2. Contractor shall indemnify and hold Fresh Lawn harmless for any and all amounts of taxes and penalties and interest determined
+          to be due by Fresh Lawn (by any federal or state tax administrative agency) for the amounts paid by Fresh Lawn
+          to Contractor pursuant to this Contractor Agreement. Such indemnification and hold harmless obligation shall include
+          all reasonable attorney’s fees incurred relative thereto.
+        </p>
+      </div>
+      <h4 style="text-align:center">J. No Authority of Independent Contractor</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. Contractor shall have <strong><u>NO authority</u></strong> to do the following:
+        </p>
+        <div class="item item-text-wrap form">
+          <p> a. Make, revise, alter, depart, or otherwise diverge from any of the terms, conditions, prices, or policies
+            which are furnished to Contractor by Fresh Lawn specified in the Work Order. </p>
+          <p> b. Incur or assume any debt, obligation, expense, or liability of any kind against or on behalf of Fresh Lawn.
+          </p>
+          <p> c. Bind or otherwise obligate Fresh Lawn to any contracts, agreements, warranties or understandings. </p>
+          <p>
+            d. Disclose any financial matters including, but not limited to, any fee sharing arrangement with Fresh Lawn, payment matters,
+            billing issues, questions regarding collection of fees. Contractor is to direct all billing inquiries to Fresh
+            Lawn.
+          </p>
+          <p> e. Disclose any portion of this Agreement with any current or past Fresh Lawn contractor, Contractor under
+            contract with Fresh Lawn or any competitor or third party. </p>
+          <p>
+            f. Except as otherwise set forth in this Agreement, the Contractor shall be solely responsible, and shall not be reimbursed
+            by Fresh Lawn, for any costs, fees, and/or expenses incurred by the Contractor in rendering the services required
+            hereunder.
+          </p>
+        </div>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          2. Should Contractor act outside of its authority, Fresh Lawn, at its sole discretion, shall have the right to immediately
+          terminate this Agreement and declare the Contractor in breach of the Agreement.
+        </p>
+      </div>
+      <div class="item item-text-wrap form">
+        <p>
+          3. Any breach by Contractor of this section shall entitle Fresh Lawn to liquidated damages of $2,500.
+        </p>
+      </div>
+      <h4 style="text-align:center">K. Protection of Business</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. The Parties hereto agree that the covenants, agreements and restrictions contained herein are necessary to protect the
+          goodwill, business interests, and proprietary rights of Fresh Lawn and that the Parties hereto have independently
+          discussed, reviewed and had the opportunity of legal counsel to consider this agreement and now hereby agree and
+          stipulate as set forth herein.
+        </p>
+      </div>
+      <h4 style="text-align:center">L. Non-Exclusivity</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. The parties acknowledge and agree that the Contractor’s services to Fresh under this Agreement shall not be exclusive.
+          The parties further acknowledge and agree that, during his/her engagement by Fresh Lawn, the Contractor may perform
+          work on behalf of, and provide services to, persons and entities other than Fresh Lawn, and may market and advertise
+          his/her services to such persons and entities, so long as the Contractor: (a) does not violate any of his/her obligations
+          under this Agreement; (b) devotes sufficient time to the performance of his/her services hereunder as is necessary
+          for the Contractor to effectively and efficiently perform all such services and fulfill all of the Contractor’s
+          obligations to Fresh Lawn under this Agreement; and (c) does not accept or become engaged in projects that create
+          a conflict of interest with Fresh Lawn.
+        </p>
+      </div>
+      <h4 style="text-align:center">M. Confidentiality </h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. The Parties recognize that the business interests of Fresh Lawn require a confidential relationship between the Parties,
+          and the fullest protection and confidential treatment of its trade secrets, customer list, pricing information,
+          know how, products, and other business knowledge developed, conceived and learned by the Parties during the course
+          of business relationship created by the terms of this Agreement. Accordingly, the Parties agree that the Parties
+          will keep secret and confidential all such information, trade secrets, customer list, pricing information, know
+          how, products, and other business knowledge developed by Fresh Lawn and/or Contractor and will not use the same
+          to aid Contractor or other persons, either directly or indirectly. Furthermore, any and all trade secrets, customer
+          list, pricing information, know how, products, and other business knowledge of Fresh Lawn shared, learned, revealed,
+          or discovered by Contractor shall be protected and Contractor shall not use same to aid itself or others, either
+          directly or indirectly, beyond those uses permitted by the Agreement. Additionally, any and all trade secrets,
+          customer list, pricing information, know how, products, and other business knowledge of Fresh Lawn developed, improved
+          upon, learned, shared, or provided by Contractor shall be protected and Contractor shall not use same to aid itself
+          or others, either directly or indirectly, beyond those uses permitted by the Agreement.
+        </p>
+        <p>
+          The Parties agree not to disclose during or following termination of this Agreement, irrespective of how such termination
+          is brought about, any of Fresh Lawn's customer lists, trade secrets, or other confidential information or material
+          shared with Contractor in furtherance of the business of Fresh Lawn. Furthermore, the Parties agrees to take reasonable
+          security measures to prevent accidental disclosure and industrial espionage.
+        </p>
+      </div>
+      <h4 style="text-align:center">N. Necessary and Integral </h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. The Parties hereby agree and acknowledge that Fresh Lawn has spent or will expend considerable sums of money and time
+          in developing good customer contact and rapport and that the client list or customer list developed by Fresh Lawn
+          is worth a considerable amount of money and therefore is a benefit which Fresh Lawn seeks to protect. Such protection
+          is hereby agreed and acknowledged by both Parties as being reasonable consideration for establishing this restriction.
+        </p>
+        <p>
+          The provisions of this Article are an integral part of the Agreement and the covenants and restrictions contained herein
+          were made at the time the Agreement was consummated by the Parties. The Parties agree that the provisions contained
+          in this Article shall be construed as ancillary to the Agreement and not an agreement independent of any other
+          provision of the Agreement. The Parties acknowledge that Fresh Lawn shall provide Contractor with confidential
+          and proprietary information including, but not limited to pricing guidelines, techniques in the trade, know how,
+          sale, and discount information and confidential customer information in exchange for Contractor's promise not to
+          disclose or utilize such information as outlined herein.
+        </p>
+      </div>
+      <h4 style="text-align:center">O. Injunctive Relief</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. In the event that Fresh Lawn determines in its sole and exclusive discretion that immediate action is necessary to enforce
+          the protections provided this Agreement, Fresh Lawn shall be entitled to seek a restraining order or injunction
+          (temporary and/or permanent) from a Court of competent jurisdiction notwithstanding any provision to the contrary
+          contained herein requiring that the parties attend mediation and/or arbitration.
+        </p>
+      </div>
+      <h4 style="text-align:center">P. Texas Law</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. This Agreement shall be construed under and in accordance with the laws of the state of Texas and all obligations of the
+          Parties created hereunder are performable in Harris County, Houston, Texas, and said location is designated as
+          the Venue for <strong>Arbitration</strong> hereunder.
+        </p>
+      </div>
+      <h4 style="text-align:center">Q. Severability</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. If any provision of this Agreement or the application thereof to any person or circumstance shall be invalid or enforceable
+          to any extent, the remainder of this Agreement and the application of such provision to other persons or circumstances
+          shall not be affected thereby and shall be enforced to the greatest extent permitted by law. The failure of either
+          party to insist, in any one or more instances, upon the performance of any of the terms or conditions of this Agreement,
+          or to exercise any right herein, shall not be construed as a waiver or relinquishment of such term, condition or
+          right.
+        </p>
+      </div>
+      <h4 style="text-align:center">R. Notice</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. Any notice provided for under this Agreement must be given in writing, but may be served by depositing same in the United
+          States mail, addressed to the party to be notified, postage paid, and registered or certified return receipt requested
+          at the address for each respective party set forth below. Either party shall have the continuing right to change
+          its address for notice at any time or times by the giving of ten (10) days written notice in the manner hereinabove
+          described. Notices shall be deemed given at the time of depositing same in the United States mail.
+        </p>
+        <p>
+          To: Infinity Internet Marketing, Inc. d/b/a Fresh Lawn Mowing Services Attn: Mr. Ronald Jones 11500 Northwest Fwy, Suite
+          614 Houston, TX 77092
+        </p>
+        <p>
+          To: Contractor To the address set forth on Page 1
+        </p>
+      </div>
+      <h4 style="text-align:center">S. Headings</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. Article, section, paragraph and other headings contained in this Agreement are for convenience and reference purposes
+          only, and shall have no legal force or effect whatever. Article, section, paragraph and other headings are not
+          to be considered a part of this Agreement and are not intended to describe, interpret, define or limit the scope
+          or intent of this Agreement or any provision thereof.
+        </p>
+      </div>
+      <h4 style="text-align:center">T. Waiver</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. A failure by either party hereto to exercise any right given under this Agreement or to insist upon strict compliance
+          with any obligation specified in this Agreement shall not constitute a waiver of such party’s right to demand exact
+          compliance with the terms of this Agreement.
+        </p>
+      </div>
+      <h4 style="text-align:center">U. ARBITRATION AGREEMENT</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          <strong>
+            1. THE PARTIES AGREE THAT THIS AGREEMENT IS SUBJECT TO MUTUAL BINDING ARBITRATION PURSUANT TO THE FEDERAL ARBITRATION ACT
+            (“FAA”), AND ANY DISPUTE UNDER THIS AGREEMENT WILL BE GOVERNED AND SETTLED BY AN IMPARTIAL INDEPENDENT (E.G.,
+            ARBITRATOR) APPOINTED BY THE AMERICAN ARBITRATION ASSOCIATION (“AAA”), AND THE DETERMINATION OF THE ARBITRATOR
+            SHALL BE FINAL AND BINDING (EXCEPT FOR THE EXTENT THERE EXISTS GROUNDS FOR VACATING AN AWARD). THE ARBITRATOR
+            SHALL HAVE NO AUTHORITY TO MAKE ANY RULING, FINDING OR AWARD THAT DOES NOT CONFORM TO THE TERMS AND CONDITIONS
+            OF THIS AGREEMENT. EACH PARTY SHALL BEAR ITS OWN COSTS IN ANY ARBITRATION. THE ARBITRATION PROVISION CONTAINED
+            HEREIN SHALL BE SELF-EXECUTING AND SHALL REMAIN IN FULL FORCE AFTER EXPIRATION OF TERMINATION OF THIS AGREEMENT.
+            IN THE EVENT ANY PARTY FAILS TO APPEAR TO ANY PROPERLY NOTICED ARBITRATION PROCEEDING, AN AWARD MAY BE ENTERED
+            AGAINST SUCH PARTY BY DEFAULT OR OTHERWISE, NOTWITHSTANDING SUCH FAILURE TO APPEAR. THE PLACE OF ARBITRATION
+            SHALL BE HARRIS COUNTY, HOUSTON, TEXAS. THE ARBITRATOR SHALL GIVE EFFECT INSOFAR AS POSSIBLE TO THE DESIRE OF
+            THE PARTIES HERETO THAT THE DISPUTE OR CONTROVERSY BE RESOLVED IN ACCORDANCE WITH GOOD COMMERCIAL PRACTICE AND
+            THE PROVISIONS OF THIS AGREEMENT. TO THE FULLEST EXTENT PERMITTED BY LAW, THE ARBITRATOR SHALL APPLY THE COMMERCIAL
+            ARBITRATION RULES OF THE AAA AND TITLE 9 OF THE U.S. CODE, EXCEPT TO THE EXTENT THAT SUCH RULES CONFLICT WITH
+            THE PROVISIONS OF THIS SECTION U IN WHICH EVENT THE PROVISIONS OF THIS SECTION U SHALL CONTROL.
+          </strong>
+        </p>
+        <p>
+          <strong>
+            THE PARTIES WAIVE ANY RIGHT TO LITIGATE ANY CONTROVERSIES, DISPUTES OR CLAIMS IN A COURT OF LAW, AND WAIVE THE RIGHT TO TRIAL
+            BY JURY. ALL PARTIES SHALL HAVE THE RIGHT TO BE REPRESENTED BY LEGAL COUNSEL AT ARBITRATION. THE ARBITRATOR SHALL
+            PERMIT REASONABLE DISCOVERY. THE PARTIES SHALL HAVE THE RIGHT TO SUBPOENA WITNESSES IN ORDER TO COMPEL THEIR
+            ATTENDANCE AT A HEARING AND TO CROSS-EXAMINE WITNESSES, AND THE ARBITRATOR’S DECISION SHALL BE IN WRITING AND
+            SHALL CONTAIN FINDINGS OF FACT AND CONCLUSIONS OF LAW. THE ARBITRATOR’S DECISION SHALL BE FINAL, SUBJECT ONLY
+            TO REVIEW PURSUANT TO THE FAA. FOR ANY CLAIMS OF THE CONTRACTOR BASED UPON ANY FEDERAL, STATE OR LOCAL STATUTORY
+            PROTECTIONS, FRESH LAWN SHALL PAY ALL FEES CHARGED BY THE ARBITRATOR. THE ARBITRATOR SHALL HAVE EXCLUSIVE AUTHORITY
+            TO RESOLVE ANY AND ALL DISPUTES OVER THE VALIDITY OF ANY PART OF THIS AGREEMENT, AND ANY AWARD BY THE ARBITRATOR
+            MAY BE ENTERED AS A JUDGEMENT IN ANY COURT HAVING JURISDICTION.
+          </strong>
+        </p>
+        <p>
+          <strong>
+            CONTRACTOR UNDERSTANDS AND ACKNOWLEDGES THAT BY SIGNING THIS AGREEMENT, SHE/HE SPECIFICALLY WAIVES ANY RIGHT TO PARTICIPATE
+            IN ANY CLASS ACTION OR COLLECTIVE ACTION AND IF AT ANY TIME CONTRACTOR IS DEEMED A MEMBER OF ANY CLASS CREATED
+            BY ANY COURT/ARBITRATION IN ANY PROCEEDING, SHE/HE WILL “OPT OUT” OR NOT “OPT INTO” SUCH CLASS, AND SHOULD ANY
+            THIRD PARTY PURSUE ANY CLAIMS ON HER/HIS BEHALF, CONTRACTOR SHALL WAIVE HER/HIS RIGHT TO ANY SUCH MONETARY RECOVERY.
+          </strong>
+        </p>
+      </div>
+      <h4 style="text-align:center">V. Entire Agreements</h4>
+      <div class="item item-text-wrap form">
+        <p>
+          1. This Agreement and all references made herein represent the entire and integrated agreement between Fresh Lawn and Contractor
+          and supersedes any and all prior negotiations, representations or agreements, either written or oral. This Agreement
+          may not be changed, modified, or amended in any way, without the prior written approval of each of the Parties
+          hereto, and may be amended only by a written instrument signed by the Parties hereto.
+        </p>
+        <p>
+          EXECUTED this the <strong>{{formInfo.day}}</strong> of <strong>{{formInfo.month}} {{formInfo.year}}</strong></p>
+      </div>
+      <div class="item item-text-wrap form">
+        By: <label class="text-uppercase"><strong><u>Ronald Jones</u></strong></label><br />
+        <small style="padding-left: 5%;"><strong>Fresh Lawn</strong></small><br />
+        <small style="padding-left: 5%;">Authorized Representative</small><br /><br /> &
+        <br /><br />
+        <strong>
+          INDEPENDENT CONTRACTOR:
+        </strong><br /><br />
+        <p>By:
+
+          <ion-item>
+            <ion-label stacked>Sign here</ion-label>
+            <ion-checkbox [(ngModel)]="formInfo.cb_signature" formControlName="cb_signature" item-right></ion-checkbox>
+          </ion-item>
+        </p>
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>Printed Name, Independent Contractor</ion-label>
+            <ion-input type="text" [(ngModel)]="formInfo.printed_name" formControlName="printed_name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Date</ion-label>
+            <ion-input type="text" [(ngModel)]="formInfo.date" formControlName="date"></ion-input>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div padding>
+        <button ion-button type="submit" color="primary" block [disabled]="!formInfo.valid">Submit</button>
+      </div>
+    </form>
+  </ion-grid>
+</ion-content>

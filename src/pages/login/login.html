@@ -1,0 +1,48 @@
+<!-- <ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button>
+        <a id="tel" href="tel:+1-800-896-5320" style="text-decoration: none;"> (800) 896-5320 </a>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content>
+  <form (submit)="doLogin()" id="login">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <div class="login-logo"></div>
+          <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+          </ion-item>
+
+          <div padding>
+            <button ion-button color="primary" block type="submit">Login</button>
+            <button ion-button color="secondary" block (click)="signup()" type="button">Sign Up</button>
+          </div>         
+        </ion-col>
+      </ion-row>
+      <ion-row fixed>
+          <ion-col col-auto col-lg-6  style="width: 100%">
+            <a href="https://play.google.com/store/apps/details?id=com.freshlawn.lawnmowingapp.freshlawnapp&hl=en">
+              <img src="https://www.freshlawn.com/images/btn2.png">
+            </a>
+          </ion-col>
+          <ion-col col-auto col-lg-6  style="width: 100%">
+            <a href="https://itunes.apple.com/us/app/fresh-lawn-contractor/id1331054533?mt=8">
+              <img src="https://www.freshlawn.com/images/btn1.png">
+            </a>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+  </form>
+
+
+</ion-content>

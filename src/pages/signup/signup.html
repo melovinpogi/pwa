@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+ 
+  <ion-grid padding fixed>
+      <ion-item *ngIf="searchAddress">
+          <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Search Address"></ion-searchbar>
+          <ion-list>
+            <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+              {{ item.description }}
+            </ion-item>
+          </ion-list>
+        </ion-item>
+    <ion-item *ngIf="!searchAddress" no-lines>
+      <button ion-button type="button" color="secondary" block clear (click)="isSearchAddress()">Search Again</button>
+    </ion-item>
+    <form (submit)="doSignup()" [formGroup]="formAccount" *ngIf="!searchAddress">
+      <ion-row>
+        <ion-col col-auto col-lg-6>
+          <ion-item>
+            <ion-label stacked>Firstname</ion-label>
+            <ion-input type="text" [(ngModel)]="account.firstname" formControlName="firstname"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Lastname</ion-label>
+            <ion-input type="text" [(ngModel)]="account.lastname" formControlName="lastname"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="email" [(ngModel)]="account.email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Phone</ion-label>
+            <ion-input type="number" [(ngModel)]="account.phone" formControlName="phone"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Phone Type</ion-label>
+            <ion-select [(ngModel)]="account.phonetype" interface="popover" formControlName="phonetype">
+              <ion-option value="Android">Android</ion-option>
+              <ion-option value="iOS">iOS</ion-option>
+            </ion-select>
+          </ion-item>
+          <div *ngIf="!searchAddress">
+            <ion-item>
+              <ion-label stacked>Address</ion-label>
+              <ion-input type="text" [(ngModel)]="account.address" formControlName="address" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>City</ion-label>
+              <ion-input type="text" [(ngModel)]="account.city" formControlName="city" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>State</ion-label>
+              <ion-input type="text" [(ngModel)]="account.state" formControlName="state" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Zipcode</ion-label>
+              <ion-input type="number" [(ngModel)]="account.zipcode" formControlName="zipcode" readonly></ion-input>
+            </ion-item>
+          </div>
+
+        </ion-col>
+        <ion-col col-auto col-lg-6>
+          <ion-item>
+            <ion-label stacked>Availability</ion-label>
+            <ion-select [(ngModel)]="account.is_full_time" interface="popover" formControlName="is_full_time">
+              <ion-option value="true">Full Time</ion-option>
+              <ion-option value="false">Part Time</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Have Crews:</ion-label>
+            <ion-select [(ngModel)]="account.have_crews" interface="popover" formControlName="have_crews">
+              <ion-option value="true">Yes</ion-option>
+              <ion-option value="false">No</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>If Yes, # of contractors:</ion-label>
+            <ion-input type="number" [(ngModel)]="account.no_of_crews" formControlName="no_of_crews"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Work Schedule</ion-label>
+            <ion-select [(ngModel)]="account.work_sched" formControlName="work_sched" multiple="true">
+              <ion-option value="mon">Monday</ion-option>
+              <ion-option value="tue">Tuesday</ion-option>
+              <ion-option value="wed">Wednesday</ion-option>
+              <ion-option value="thu">Thursday</ion-option>
+              <ion-option value="fri">Friday</ion-option>
+              <ion-option value="sat">Saturday</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Date Start</ion-label>
+            <ion-input type="date" [(ngModel)]="account.date_start" formControlName="date_start"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Number of Jobs per day</ion-label>
+            <ion-input type="number" [(ngModel)]="account.num_of_jobs" formControlName="num_of_jobs"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Equipments</ion-label>
+
+            <ion-select [(ngModel)]="account.eq" formControlName="eq" multiple="true">
+              <ion-option *ngFor="let e of eqList" [value]="e.value" [innerHtml]="e.title"></ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <div padding>
+        <button ion-button type="submit" color="primary" block [disabled]="!formAccount.valid">Sign Up</button>
+      </div>
+    </form>
+
+  </ion-grid>
+</ion-content>

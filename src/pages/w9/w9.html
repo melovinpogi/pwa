@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>W9 Form</ion-title>
+    <ion-buttons end>
+      <button ion-button>
+        <a href="https://www.irs.gov/pub/irs-pdf/fw9.pdf" style="text-decoration: none;"> Open W9 Form </a>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid fixed>
+    <form (submit)="submit()" [formGroup]="w9Form">
+      <ion-row align-items-center>
+        <ion-item>
+          <ion-label stacked>Name</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.name" formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Business Name</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.name" formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Check appropiate box for federal tax classification <small>check only one of the following seven
+              boxes:
+            </small></ion-label>
+          <ion-select [(ngModel)]="w9Info.tax_classification" interface="popover" formControlName="tax_classification">
+            <ion-option *ngFor="let e of taxClass" [value]="e.value" [innerHtml]="e.title"></ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Exempt payee code (if any)</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.exemptions_payee_code" formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Exemption from FATCA reporting code</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.exemptions_from_fatca_code" formControlName="exemptions_from_fatca_code"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Address</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.address" formControlName="address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>City</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.city" formControlName="city"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>State</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.state" formControlName="state"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Zipcode</ion-label>
+          <ion-input type="number" [(ngModel)]="w9Info.zip" formControlName="zip"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Requester's name and address (optional)</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.requester_name_address" formControlName="city"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>List account number(s) here (optional)</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.list_account_number" formControlName="list_account_number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>SSN</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.ssn" formControlName="ssn"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Employer identification number</ion-label>
+          <ion-input type="text" [(ngModel)]="w9Info.ein" formControlName="ein"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Sign here</ion-label>
+          <ion-checkbox [(ngModel)]="w9Info.cb_signature" formControlName="cb_signature" item-right></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Date</ion-label>
+          <ion-input type="date" [(ngModel)]="w9Info.date" formControlName="date"></ion-input>
+        </ion-item>
+      </ion-row>
+      <div padding>
+        <button ion-button type="submit" color="primary" block [disabled]="!w9Form.valid">Submit</button>
+      </div>
+    </form>
+
+  </ion-grid>
+</ion-content>
